@@ -272,6 +272,9 @@ converters = {
     "zec": AddressConverterBtcLike(
         bech32_prefix=None, nonstandard_prefix="nonstandard"
     ),
+    "dgb": AddressConverterBtcLike(
+        bech32_prefix="dgb1", nonstandard_prefix="nonstandard"
+    ),
 }
 
 

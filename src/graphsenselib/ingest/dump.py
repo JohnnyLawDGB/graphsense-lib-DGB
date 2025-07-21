@@ -17,7 +17,7 @@ from graphsenselib.utils import first_or_default
 
 from ..config import get_reorg_backoff_blocks
 
-SUPPORTED = ["trx", "eth", "btc", "ltc", "bch", "zec"]
+SUPPORTED = ["trx", "eth", "btc", "ltc", "bch", "zec", "dgb"]
 
 # filesizes should be between 100 and 1000 MB and partitions > 1000MB
 # therefore we try to write files that are between 100 and 1000 MB and
@@ -30,6 +30,7 @@ FILESIZES = {
     "eth": 1000,
     "btc": 1000,
     "bch": 1000,
+    "dgb": 1000,
 }
 
 PARTITIONSIZES = {
@@ -39,6 +40,7 @@ PARTITIONSIZES = {
     "eth": 10000,
     "btc": 10000,
     "bch": 10000,
+    "dgb": 10000,
 }
 
 
@@ -92,7 +94,7 @@ def export_delta(
         source = SourceETH(provider_uri=provider_uri, provider_timeout=provider_timeout)
         transformer = TransformerETH(partition_batch_size, "eth")
 
-    elif currency in ["btc", "ltc", "bch", "zec"]:
+    elif currency in ["btc", "ltc", "bch", "zec", "dgb"]:
         source = SourceUTXO(
             provider_uri=provider_uri,
             network=currency,

@@ -9,7 +9,7 @@ from pydantic import BaseModel, field_validator
 
 from ..utils import first_or_default, flatten
 
-supported_base_currencies = ["btc", "eth", "ltc", "bch", "zec", "trx"]
+supported_base_currencies = ["btc", "eth", "ltc", "bch", "zec", "trx", "dgb"]
 default_environments = ["prod", "test", "dev", "exp1", "exp2", "exp3"]
 schema_types = ["utxo", "account", "account_trx"]
 keyspace_types = ["raw", "transformed"]
@@ -25,6 +25,7 @@ avg_blocktimes_by_currencies = {
     "bch": 600,
     "zec": 75,
     "ltc": 150,
+    "dgb": 15,
 }
 
 reorg_backoff_blocks = {
@@ -34,6 +35,7 @@ reorg_backoff_blocks = {
     "bch": 15,
     "zec": 150,
     "ltc": 12,
+    "dgb": 120,
 }
 
 
