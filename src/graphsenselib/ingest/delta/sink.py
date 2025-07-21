@@ -454,6 +454,7 @@ CONFIG_MAP = {
     "ltc": UTXO_DBWRITE_CONFIG,
     "bch": UTXO_DBWRITE_CONFIG,
     "zec": UTXO_DBWRITE_CONFIG,
+    "dgb": UTXO_DBWRITE_CONFIG,
 }
 
 

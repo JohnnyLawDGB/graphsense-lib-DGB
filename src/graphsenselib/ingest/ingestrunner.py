@@ -15,6 +15,7 @@ AVG_BLOCKTIME = {
     "zec": int(1.25 * 60),
     "btc": 10 * 60,
     "bch": 10 * 60,
+    "dgb": 15,
 }
 
 

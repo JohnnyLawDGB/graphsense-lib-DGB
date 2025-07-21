@@ -27,6 +27,7 @@ try:
         # is not filled correctly.
         "bch": Chain.BITCOIN,
         "zec": Chain.ZCASH,
+        "dgb": Chain.BITCOIN,
     }
 
 
